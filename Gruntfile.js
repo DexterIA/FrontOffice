@@ -1,5 +1,5 @@
 module.exports = function(grunt) {
-  var jsFiles = ['Gruntfile.js', 'simpleFace/js/*.js', 'webService/*.js', 'webService/resources/*.js'];
+  var jsFiles = ['Gruntfile.js', 'frontend/js/*.js'];
   'use strict';
 
   grunt.initConfig({

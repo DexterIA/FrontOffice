@@ -22,7 +22,7 @@ angular.module('CRM', ['ngMaterial', 'ngMessages', 'loginPage'])
           })
           .then(function (answer) {
             $scope.id = answer;
-            $scope.loadCustomer();
+            //$scope.loadCustomer();
           });
 
 
@@ -34,7 +34,7 @@ angular.module('CRM', ['ngMaterial', 'ngMessages', 'loginPage'])
 
       };
 
-      $scope.loadCustomer = function () {
+      /*$scope.loadCustomer = function () {
         var auth = $http.post('http://127.0.0.1:8081/CRM/findClient', {id: $scope.id}),
           orders = $http.post('http://127.0.0.1:8081/CRM/findOrders', {clientId: $scope.id});
         auth.success(function(data) {
@@ -48,6 +48,6 @@ angular.module('CRM', ['ngMaterial', 'ngMessages', 'loginPage'])
             $scope.customerOrders = data;
           }
         });
-      };
+      };*/
 
     }]);

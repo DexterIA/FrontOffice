@@ -36,10 +36,15 @@ angular.module('loginPage', ['ngMaterial', 'ngMessages'])
      */
     $scope.processLogin = function () {
       if ($scope.login && $scope.pass) {
-        var auth = $http.post('http://127.0.0.1:8081/CRM/checkAuth', {login: $scope.login, pass: $scope.pass});
-        auth.success(function(data) {
-          if (data) {
-            $scope.answer(data);
+        $http({
+          method: 'POST',
+          url: 'http://127.0.0.1:8081/admin/authFrontOfficeUser',
+          withCredentials: true,
+          headers: {'Content-Type': 'application/json'},
+          data: {login: $scope.login, pass: $scope.pass}
+        }).then(function(result) {
+          if (result.data) {
+            $scope.answer($scope.login);
           } else {
             $scope.notValid = true;
           }
