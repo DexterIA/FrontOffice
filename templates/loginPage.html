@@ -1,0 +1,29 @@
+<md-dialog aria-label="Login" ng-cloak style="width: 355px">
+    <form>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Login</h2>
+                <span flex></span>
+            </div>
+        </md-toolbar>
+
+        <md-dialog-content>
+            <md-content layout="column" style="padding-bottom: 7px" class="md-dialog-content md-padding">
+                <md-input-container>
+                    <label>Логин:</label>
+                    <input type="text" ng-model="login" required>
+                </md-input-container>
+                <md-input-container>
+                    <label>Пароль:</label>
+                    <input type="password" ng-model="pass" required>
+                </md-input-container>
+                <md-button class="md-primary md-raised" ng-click="processLogin()">
+                    Login
+                </md-button>
+                <label ng-if="notValid" style="text-align: center; color: #c60008; margin-top: 12px">
+                    Не верный логин или пароль
+                </label>
+            </md-content>
+        </md-dialog-content>
+    </form>
+</md-dialog>
