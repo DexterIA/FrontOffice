@@ -2,6 +2,6 @@
 
 Part of hotel management project.<br><br>
 
-Single page application. Written by:<br>
+Single page application. Written using:<br>
 AngularJS - JS framework.<br>
 Angular-Material - as css framework.
